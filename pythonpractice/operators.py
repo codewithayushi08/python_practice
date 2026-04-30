@@ -1,4 +1,4 @@
-print('hello world')
+print('hello World')
 print(2+2)
 print("my name is ayushi, my age is 19.")
 name="Ayushi" 
