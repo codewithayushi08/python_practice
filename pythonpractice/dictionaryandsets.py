@@ -1,78 +1,93 @@
-info={
-    "key":"value",
-    "name":"sai",
-    "learning":"coding",
-    "age":35,
-    "is_adult":True,
-    "marks":94.4,
-    "subjects":["python","c","java"],
-    "topics":("dict","set")
+# Day 4- Dictionaries and Sets
+
+# ----------------------
+# DICTIONARY BASICS
+# ----------------------
+
+info = {
+    "key": "value",
+    "name": "sai",
+    "learning": "coding",
+    "age": 35,
+    "is_adult": True,
+    "marks": 94.4,
+    "subjects": ["python", "c", "java"],
+    "topics": ("dict", "set")
 }
 
-null_dict={}
+print("Type:", type(info))
 
-print(null_dict)
+# Modify dictionary
+info["name"] = "ayushi"
+info["surname"] = "das"
 
-print(type(info))
-info["name"]="ayushi"
-info["surname"]="das"
-print(info)
-print(info["name"])
-print(info["topics"])
-print(info["subjects"])
-print(info["learning"])
+print("Updated info:", info)
+print("Name:", info["name"])
+print("Subjects:", info["subjects"])
 
+# ----------------------
+# NESTED DICTIONARY
+# ----------------------
 
-#nested dictionaries
-
-student={
-    "name":"sonakshi apoorba",
-    "subjects":{
-        "phy":97,
-        "chem":98,
-        "maths":99,
-        "eng":100,
-
+student = {
+    "name": "sonakshi apoorba",
+    "subjects": {
+        "phy": 97,
+        "chem": 98,
+        "maths": 99,
+        "eng": 100
     }
 }
-print(student)
 
-print(student.keys())
-print(student.values())
-print(list(student.keys()))
-print(list(student.values()))
-print(student.items())
-print(len(student))
-print(student.get("phy"))
-student.update({"sst":99})
-print(student)
-pairs=list(student.items())
-print(pairs[0])
+print("Student:", student)
 
-#set
-collection={1,2,3,2,"hello","world","world"}
-print(collection)
-print(type(collection))
-print(len(collection))
+# Access nested value
+print("Physics marks:", student["subjects"]["phy"])
 
-collection1={} #empty dictionary
-collection2=set()
-print(type(collection2))
-#set methods
-collection3=set()
+# Dictionary methods
+print("Keys:", student.keys())
+print("Values:", student.values())
+print("Items:", student.items())
+print("Length:", len(student))
+
+student.update({"sst": 99})
+print("After update:", student)
+
+pairs = list(student.items())
+print("First pair:", pairs[0])
+
+# ----------------------
+# SETS
+# ----------------------
+
+collection = {1, 2, 3, 2, "hello", "world", "world"}
+print("Set:", collection)
+print("Length:", len(collection))
+
+# Empty set
+empty_set = set()
+print("Type:", type(empty_set))
+
+# Set methods
+collection3 = set()
 collection3.add(1)
 collection3.add("sai")
-collection3.add((1,2,3))
+collection3.add((1, 2, 3))
+
 collection3.remove(1)
+print("After remove:", collection3)
+
 collection3.clear()
-print(len(collection3))
+print("After clear:", collection3)
 
+# Pop
+collection4 = {"hello", "sai", "helloworld", "coding", "python"}
+print("Popped:", collection4.pop())
+print("Remaining:", collection4)
 
+# Union & Intersection
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
 
-collection4={"hello","sai","helloworld","coding","python"}
-print(collection4.pop())
-print(collection4.pop())
-set1={1,2,3}
-set2={2,3,4}
-print(set1.union(set2))
-print(set1.intersection(set2))
+print("Union:", set1.union(set2))
+print("Intersection:", set1.intersection(set2))
