@@ -1,61 +1,64 @@
-#list and tupples
-marks=[94.4,95.2,45.2]
-print(marks)
-print(type(marks))
-print(marks[0])
-print(marks[1])
-print(len(marks))
-student=["karan",95.4,17,"Delhi"]
-print(student[0])
-#student[0]="arjun"
-#print(student)
+## Day 3- Lists and Tuples
 
+# ----------------------
+# LISTS
+# ----------------------
 
+marks = [94.4, 95.2, 45.2]
+print("Marks:", marks)
+print("Type:", type(marks))
+print("First mark:", marks[0])
+print("Second mark:", marks[1])
+print("Length:", len(marks))
 
-#list slicing
-marks=[87,64,33,95,76]
-print(marks[1:4])
-print(marks[:4])
-print(marks[1:])
-print(marks[-3:-1])
+student = ["Karan", 95.4, 17, "Delhi"]
+print("Student name:", student[0])
 
+# ----------------------
+# LIST SLICING
+# ----------------------
 
-#list methods
+numbers = [87, 64, 33, 95, 76]
+print(numbers[1:4])
+print(numbers[:4])
+print(numbers[1:])
+print(numbers[-3:-1])
 
-#list=["banana ","apple" ,"litchi" ,"mango" ]
-#print(list.append(4))
-#print(list)
-#print(list.sort())
-#print(list)
-#print(list.sort(reverse=True))
-#print(list)
+# ----------------------
+# LIST METHODS
+# ----------------------
 
-list=["a", "d","e","f","c","b"]
-print(list.sort())
-print(list)
-print(list.sort(reverse=True))
-print(list)
+fruits = ["a", "d", "e", "f", "c", "b"]
 
+fruits.sort()
+print("Sorted:", fruits)
 
-list=[2,1,3,1]
-list.remove(1)
-print(list)
-list.pop(2)
-print(list)
+fruits.sort(reverse=True)
+print("Reverse sorted:", fruits)
 
+nums = [2, 1, 3, 1]
+nums.remove(1)
+print("After remove:", nums)
 
-#TUPLES
-tup=(2,1,3,1)
-print(type(tup))
-print(tup[0])
-print(tup[1])
-#tup[0]=5#not allowed intuple
-tup=(1,2,3,4)
-print(tup)
-print(type(tup))
-print(tup[1:3])
+nums.pop(2)
+print("After pop:", nums)
 
-#TUPLE METHODS
-tup=(1,2,3,4,5)
-print(tup.index(2))
-print(tup.count(2))
+# ----------------------
+# TUPLES
+# ----------------------
+
+tup = (2, 1, 3, 1)
+print("Tuple:", tup)
+print("First element:", tup[0])
+
+# Tuple slicing
+tup2 = (1, 2, 3, 4)
+print("Sliced tuple:", tup2[1:3])
+
+# ----------------------
+# TUPLE METHODS
+# ----------------------
+
+tup3 = (1, 2, 3, 4, 5)
+print("Index of 2:", tup3.index(2))
+print("Count of 2:", tup3.count(2))
