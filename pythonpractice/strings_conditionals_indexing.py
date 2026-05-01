@@ -1,94 +1,113 @@
-#strings and conditional statements
-str1="This is a string"
-len1=len(str1)
-print(len1)
-str2='sonakshi'
-len2=len(str2)
-print(len2)
-str3="""this is a string"""
-len3=len(str3)
-print(len3)
-str4="This is a string.\n We are creating it in python" 
+## Day 2- Strings and Conditional Statements
+
+# ----------------------
+# STRINGS BASICS
+# ----------------------
+
+str1 = "This is a string"
+print("Length:", len(str1))
+
+str2 = "sonakshi"
+print("Length:", len(str2))
+
+str3 = """this is a string"""
+print("Length:", len(str3))
+
+str4 = "This is a string.\nWe are creating it in python"
 print(str4)
-len4=len(str4)
-print(len4)
-str5="sonakshi"
-str6="apoorba"
-final_str = str5+str6
-print(final_str)
-lenfinal=len(final_str)
-print(lenfinal)
-#INDEXING
+print("Length:", len(str4))
 
-str="sonakshi apoorba"
-ch=str[0]
-print(ch)
-print(str[3])
-print(str[1:4])
-print(str[5:12])
-print(str[5:])
-str="apple"
-print(str[-3:-1])
-print(str[-5:-2])
-str="i am studying python"
-print(str.endswith("thon"))
-print(str.capitalize())
-print(str)
-print(str.replace("o","a"))
-print(str.replace("python","java script"))
-print(str.find("o"))
-print(str.find("studying"))
-print(str.find("queen"))
-print(str.count("am"))
+# ----------------------
+# STRING OPERATIONS
+# ----------------------
 
+first = "sonakshi"
+second = "apoorba"
 
+final_str = first + second
+print("Concatenated:", final_str)
+print("Length:", len(final_str))
 
-#WAP to input users first name and print its length  
-name=input("Enter your first name:")
-print("Welcome",name)
-len_name=(len(name))
-print(len_name)
+# ----------------------
+# INDEXING & SLICING
+# ----------------------
 
+text = "sonakshi apoorba"
 
+print(text[0])
+print(text[3])
+print(text[1:4])
+print(text[5:12])
+print(text[5:])
 
-#WAP tofind occurrence of s in a string
-str1="shiridi is sai baba's land."
-print(str1.count("s"))
+text2 = "apple"
+print(text2[-3:-1])
+print(text2[-5:-2])
 
-#conditional statements
-light="ivory"
-if(light=="red"):
-   print("stop")
-elif(light=="green"):
-    print("go")
-elif(light=="yellow"):
-    print("look") 
-else: print("light is broken")# else only once used without any conditions
+# ----------------------
+# STRING METHODS
+# ----------------------
 
+sentence = "i am studying python"
 
-num=5
-#if(num>2):
- #   print("greater than 2")
-#elif(num>3):
-   # print("greater than 3")
-age=24
-if(age>=18):
-    print("can vote")#indentations=proper spacing
+print(sentence.endswith("thon"))
+print(sentence.capitalize())
+print(sentence.replace("o", "a"))
+print(sentence.replace("python", "java script"))
+print(sentence.find("o"))
+print(sentence.find("studying"))
+print(sentence.find("queen"))
+print(sentence.count("am"))
+
+# ----------------------
+# MINI PROGRAMS
+# ----------------------
+
+# Input name and print length
+name = input("Enter your first name: ")
+print("Welcome", name)
+print("Length:", len(name))
+
+# Count occurrence of 's'
+line = "shiridi is sai baba's land."
+print("Count of s:", line.count("s"))
+
+# ----------------------
+# CONDITIONAL STATEMENTS
+# ----------------------
+
+light = "ivory"
+
+if light == "red":
+    print("Stop")
+elif light == "green":
+    print("Go")
+elif light == "yellow":
+    print("Look")
 else:
-    print("CANNOT VOTE")
+    print("Light is broken")
 
+# Voting eligibility
+age = 24
 
-
-#grade system
-marks=float(input("Enter your marks:"))
-if(marks >= 90):
-    grade="A"
-elif(marks>=80 and marks <90):
-    grade="B"
-elif(marks>=70 and marks<80):
-    grade="C"
+if age >= 18:
+    print("Can vote")
 else:
-    grade="D"
-print("Grade of student ->",grade)
+    print("Cannot vote")
 
+# ----------------------
+# GRADE SYSTEM
+# ----------------------
 
+marks = float(input("Enter your marks: "))
+
+if marks >= 90:
+    grade = "A"
+elif marks >= 80:
+    grade = "B"
+elif marks >= 70:
+    grade = "C"
+else:
+    grade = "D"
+
+print("Grade:", grade)
