@@ -1,59 +1,36 @@
-def calc_sum(a,b):
-    sum=a+b
-    print(sum)
-    return sum
-calc_sum(5,10)
+# -------- Function to calculate sum --------
+def calc_sum(a, b):
+    return a + b
+
+result1 = calc_sum(5, 10)
+result2 = calc_sum(2, 10)
+result3 = calc_sum(12, 17)
+
+print(result1)
+print(result2)
+print(result3)
+
+# -------- Another example --------
+total = calc_sum(178, 2221)
+print(total)
 
 
-#3a=5,b=10
-
-#sum=a+b
-#print(sum)
-#more lines of code
-calc_sum(2,10)
-#a=2,b=10
-#sum=a+b
-#print(sum)
-
-
-#more lines of code
-calc_sum(12,17)
-#a=12,b=17
-#sum=a+b
-#print(sum)
-
-#function definition
-def calc_sum(a,b):#parameters
-    return a+b
-sum= calc_sum(178,2221) #function call,arguments(a,b)
-print(sum)
-
-
+# -------- Function to print hello --------
 def print_hello():
     print("hello")
 
-print_hello()
-print_hello()
-print_hello()
-print_hello()
-print_hello()
-output=print_hello()
-print(output)
+for _ in range(5):
+    print_hello()
 
 
-#types of functions
-
-#built in functions
-
-print("sai", end=" $") #sep=" "
-print("sonakshi") #end = " \n"
+# -------- Built-in print usage --------
+print("sai", end=" $")
+print("sonakshi")
 
 
-#user defined functions
+# -------- Default parameter example --------
+def calc_product(a, b=3):
+    return a * b
 
-
-#default parameters
-def cal_prod(a,b=3):
-    print(a*b)
-    return a*b
-cal_prod(3)
+print(calc_product(3))       # uses default b=3
+print(calc_product(3, 5))    # overrides default
