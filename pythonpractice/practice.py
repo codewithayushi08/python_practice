@@ -62,6 +62,23 @@ for i in range(1,n+1):
 
 
 #WAP TO FIND FACTORIAL OF A NUMBER
+n = int(input("Enter a number: "))
+fact = 1
+for i in range(1, n + 1):
+    fact *= i
+print("Factorial =", fact)
+
+
 #WAP TO CHECK PALINDROME NUMBER
+num=input("Enter a number:")
+if num==num[::-1]:
+   print("palindrome")
+else:
+   print("not palindrome")
+   
+
+    
+    
+
 
     
