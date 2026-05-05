@@ -1,3 +1,0 @@
-I want to learn JavaScript tomorrow. 123
-Then I will move to ReactJS.
-This is a sample file.
